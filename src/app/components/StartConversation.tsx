@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { SectionHeader, FadeIn } from "./AnimateIn";
-
+import { Mail } from "lucide-react";
 const enquiryOptions = [
   "Pre-Investment Due Diligence",
   "Red Flag Due Diligence",
@@ -84,17 +84,17 @@ export function StartConversation() {
                 className="text-[#6B7280] text-[13px] tracking-[0.15em] mb-5"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                PREFER WHATSAPP?
+                PREFER EMAIL?
               </p>
               <a
-                href="https://wa.me/919999999999"
+                href="mailto:info@finacquis.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 px-7 py-4 border border-[#E8E6E0] text-[#0C1D35] hover:border-[#E8B53C] hover:bg-[#FFFDF5] transition-all duration-200"
               >
-                <MessageCircle size={18} className="text-[#E8B53C]" />
+                <Mail size={18} className="text-[#E8B53C]" />
                 <span style={{ fontFamily: "Inter, sans-serif", fontSize: "16px" }}>
-                  Message us directly on WhatsApp
+                  Reach out directly via email.
                 </span>
               </a>
             </div>

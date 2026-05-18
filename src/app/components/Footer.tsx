@@ -51,6 +51,9 @@ export function Footer() {
               <p className="text-[#6B7280]" style={{ fontFamily: "Inter, sans-serif", fontSize: "15px" }}>
                 Mumbai, India
               </p>
+              <p className="text-[#6B7280]" style={{ fontFamily: "Inter, sans-serif", fontSize: "15px" }}>
+                Dubai, UAE
+              </p>
             </div>
           </div>
 
