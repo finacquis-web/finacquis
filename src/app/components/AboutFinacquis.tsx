@@ -31,7 +31,7 @@ export function AboutFinacquis() {
                 fontWeight: 400,
               }}
             >
-              A boutique intelligence firm built for decisions that matter.
+              An intelligence firm built for decisions that matter.
             </h2>
           </FadeIn>
 

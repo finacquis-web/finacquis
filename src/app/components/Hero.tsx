@@ -105,7 +105,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.7 }}
           >
-            Finacquis is a boutique intelligence and due diligence firm. We surface what structured analysis misses: promoter conduct, hidden relationships, undisclosed exposures, and early warning signals — before they become your problem.
+            Finacquis is an intelligence and due diligence firm. We surface what structured analysis misses: promoter conduct, hidden relationships, undisclosed exposures, and early warning signals — before they become your problem.
           </motion.p>
 
           {/* Buttons */}
@@ -142,9 +142,9 @@ export function Hero() {
       >
         <div className="border-t border-[#E8E6E0] pt-12 grid grid-cols-3 gap-8 max-w-2xl">
           {[
-            { stat: "48hr", label: "Fast Track Delivery Available" },
+            { stat: "48hr", label: "Fast-Track Reviews Available" },
             { stat: "100%", label: "Independent & Conflict-Free" },
-            { stat: "Global", label: "Cross-Border Intelligence" },
+            { stat: "Global", label: "Cross-Border Intelligence Capability" },
           ].map((item, i) => (
             <motion.div
               key={item.stat}
