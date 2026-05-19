@@ -105,7 +105,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.7 }}
           >
-            Finacquis is an intelligence and due diligence firm. We surface what structured analysis misses: promoter conduct, hidden relationships, undisclosed exposures, and early warning signals — before they become your problem.
+            Finacquis is an independent intelligence and due diligence firm. We surface what structured analysis misses: promoter conduct, hidden relationships, undisclosed exposures, and early warning signals — before they become your problem.
           </motion.p>
 
           {/* Buttons */}
