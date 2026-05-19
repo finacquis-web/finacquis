@@ -108,7 +108,6 @@ export function StartConversation() {
                     { id: "name", label: "FULL NAME", type: "text", placeholder: "Your full name", required: true },
                     { id: "organisation", label: "ORGANISATION / FIRM", type: "text", placeholder: "Your organisation", required: true },
                     { id: "email", label: "EMAIL ADDRESS", type: "email", placeholder: "Your email address", required: true },
-                    { id: "phone", label: "PHONE / WHATSAPP", type: "tel", placeholder: "Your phone number", required: false },
                   ].map((field) => (
                     <div key={field.id}>
                       <label className={labelClass} htmlFor={field.id}>{field.label}</label>
