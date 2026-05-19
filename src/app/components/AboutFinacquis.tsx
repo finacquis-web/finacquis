@@ -31,7 +31,7 @@ export function AboutFinacquis() {
                 fontWeight: 400,
               }}
             >
-              An intelligence firm built for decisions that matter.
+             Finacquis is an independent intelligence and due diligence firm.
             </h2>
           </FadeIn>
 
