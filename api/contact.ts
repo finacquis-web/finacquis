@@ -38,6 +38,8 @@ export default async function handler(
       <p>Email: ${email}</p>
       <p>Organisation:
       ${organisation}</p>
+      <p>Enquiry :
+      ${enquiry}</p>
 
       <p>Description:
       ${description}</p>
