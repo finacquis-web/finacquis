@@ -23,7 +23,7 @@ export default async function handler(
    await resend.emails.send({
 
       from:
-      "onboarding@resend.dev",
+      "Finacquis <info@finacquis.com>",
 
       to:
       "info@finacquis.com",
