@@ -26,7 +26,7 @@ export default async function handler(
       "onboarding@resend.dev",
 
       to:
-      "stealthplayz77@gmail.com",
+      "info@finacquis.com",
 
       subject:
       `New enquiry from ${name}`,
