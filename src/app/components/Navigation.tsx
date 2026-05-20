@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import titleImage from "../../imports/titleImage.png";
 
 const navLinks = [
   { label: "Services", id: "services" },
@@ -31,10 +32,23 @@ export function Navigation() {
       <div className="max-w-[1500px] mx-auto px-10 lg:px-20 h-16 flex items-center justify-between">
         <button
           onClick={() => scrollTo("top")}
-          className="tracking-[0.2em] text-[17px] text-[#0C1D35] transition-opacity hover:opacity-60"
-          style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 500 }}
+          className="flex items-center gap-2 hover:opacity-60 transition-opacity"
         >
-          FINACQUIS
+          <img
+            src={titleImage}
+            alt="Finacquis Logo"
+            className="h-8 w-auto object-contain"   // adjust size here
+          />
+
+          <span
+            className="tracking-[0.2em] text-[17px] text-[#0C1D35]"
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontWeight: 500,
+            }}
+          >
+            FINACQUIS
+          </span>
         </button>
 
         <div className="hidden lg:flex items-center gap-10">
