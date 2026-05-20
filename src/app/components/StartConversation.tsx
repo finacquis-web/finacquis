@@ -33,10 +33,8 @@ export function StartConversation() {
 
     try {
 
-      await fetch(
-        "/api/contact",
-        {
-
+      const response =
+        await fetch("/api/contact", {
           method: "POST",
 
           headers: {
@@ -48,11 +46,24 @@ export function StartConversation() {
             JSON.stringify(form)
         });
 
-      setSubmitted(true);
+      const data =
+        await response.json();
+
+      console.log(
+        "Response:",
+        data
+      );
+
+      if (response.ok) {
+        setSubmitted(true);
+      }
 
     } catch (err) {
 
-      console.log(err);
+      console.log(
+        "ERROR:",
+        err
+      );
 
     }
   };
