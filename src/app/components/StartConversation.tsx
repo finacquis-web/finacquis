@@ -25,9 +25,36 @@ export function StartConversation() {
     description: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (
+    e: React.FormEvent
+  ) => {
+
     e.preventDefault();
-    setSubmitted(true);
+
+    try {
+
+      await fetch(
+        "/api/contact",
+        {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+
+          body:
+            JSON.stringify(form)
+        });
+
+      setSubmitted(true);
+
+    } catch (err) {
+
+      console.log(err);
+
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
