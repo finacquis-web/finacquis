@@ -9,13 +9,7 @@ export default async function handler(
  res:any
 ){
 
- if(req.method !== "POST"){
-   return res.status(405).json({
-     message:"Method not allowed"
-   });
- }
-
- try{
+ try {
 
    const {
       name,
@@ -25,6 +19,7 @@ export default async function handler(
       description
    } = req.body;
 
+   const { data, error } =
    await resend.emails.send({
 
       from:
@@ -37,35 +32,34 @@ export default async function handler(
       `New enquiry from ${name}`,
 
       html:`
-
       <h2>New Form Submission</h2>
 
-      <p><b>Name:</b>
-      ${name}</p>
-
-      <p><b>Organisation:</b>
+      <p>Name: ${name}</p>
+      <p>Email: ${email}</p>
+      <p>Organisation:
       ${organisation}</p>
 
-      <p><b>Email:</b>
-      ${email}</p>
-
-      <p><b>Enquiry:</b>
-      ${enquiry}</p>
-
-      <p><b>Description:</b>
+      <p>Description:
       ${description}</p>
       `
    });
 
-   res.status(200).json({
-      success:true
-   });
+   console.log("DATA:",data);
+   console.log("ERROR:",error);
 
- }catch(err){
+   if(error){
+      return res.status(500)
+      .json(error);
+   }
 
-   res.status(500).json({
-      success:false
-   });
+   return res.status(200)
+   .json(data);
 
+ } catch(err){
+
+   console.log(err);
+
+   return res.status(500)
+   .json(err);
  }
 }
