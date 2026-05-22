@@ -196,7 +196,7 @@ function DDRModal({ onClose }: { onClose: () => void }) {
                 <p className="text-[#0C1D35] leading-snug" style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.25rem" }}>
                   {score >= 80 ? "Your company appears well-prepared for professional due diligence."
                     : score >= 60 ? "Your company has a reasonable foundation, with specific gaps to address."
-                    : "Several critical areas require attention before an investor process."}
+                      : "Several critical areas require attention before an investor process."}
                 </p>
               </div>
             </div>
@@ -223,7 +223,24 @@ function DDRModal({ onClose }: { onClose: () => void }) {
             </div>
             <div className="flex gap-3">
               <button onClick={() => { setStep(0); setAnswers({}); setDone(false); }} className="px-6 py-3 border border-[#E8E6E0] text-[#6B7280] hover:border-[#0C1D35]/30 transition-colors" style={{ fontFamily: "Inter, sans-serif", fontSize: "13px" }}>Retake</button>
-              <button onClick={onClose} className="px-6 py-3 bg-[#E8B53C] text-[#0C1D35] hover:bg-[#D4A030] transition-colors" style={{ fontFamily: "Inter, sans-serif", fontSize: "13px", fontWeight: 600 }}>Book a Consultation</button>
+              <button
+                onClick={() => {
+                  onClose(); // close popup
+                  setTimeout(() => {
+                    document.getElementById("contact")?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }, 100); // wait for modal to close
+                }}
+                className="px-6 py-3 bg-[#E8B53C] text-[#0C1D35] hover:bg-[#D4A030] transition-colors"
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                }}
+              >
+                Book a Consultation
+              </button>
             </div>
           </div>
         )}
@@ -310,7 +327,7 @@ function ScorecardModal({ onClose }: { onClose: () => void }) {
                 <p className="text-[#0C1D35] leading-snug" style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.25rem" }}>
                   {totalScore >= 75 ? "Your company appears well-positioned for an institutional investor process."
                     : totalScore >= 50 ? "Your company shows promise with targeted areas to strengthen before fundraising."
-                    : "Significant groundwork is recommended before approaching institutional investors."}
+                      : "Significant groundwork is recommended before approaching institutional investors."}
                 </p>
               </div>
             </div>
@@ -336,7 +353,24 @@ function ScorecardModal({ onClose }: { onClose: () => void }) {
             </div>
             <div className="flex gap-3">
               <button onClick={() => { setStep(0); setAnswers({}); setDone(false); }} className="px-6 py-3 border border-[#E8E6E0] text-[#6B7280] hover:border-[#0C1D35]/30 transition-colors" style={{ fontFamily: "Inter, sans-serif", fontSize: "13px" }}>Retake</button>
-              <button onClick={onClose} className="px-6 py-3 bg-[#E8B53C] text-[#0C1D35] hover:bg-[#D4A030] transition-colors" style={{ fontFamily: "Inter, sans-serif", fontSize: "13px", fontWeight: 600 }}>Book a Consultation</button>
+              <button
+                onClick={() => {
+                  onClose(); // close popup
+                  setTimeout(() => {
+                    document.getElementById("contact")?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }, 100); // wait for modal to close
+                }}
+                className="px-6 py-3 bg-[#E8B53C] text-[#0C1D35] hover:bg-[#D4A030] transition-colors"
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                }}
+              >
+                Book a Consultation
+              </button>
             </div>
           </div>
         )}
